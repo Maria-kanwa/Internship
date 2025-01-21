@@ -1,0 +1,1523 @@
+/*
+Theme Name:university system
+Theme URI:http://www.icodeguru.pk
+Author: Maria kanwal
+version:1.0
+Author URI:http://www.icodeguru.pk
+description:hello icodeguru
+*/
+
+/* Header Styles */
+/* Header Styling */
+header {
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding around the header */
+    position: relative; 
+    height: 170px; /* Allows for absolute positioning of child elements */
+}
+
+.container1 {
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out logo and menu */
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
+    margin-right: 75px;
+    margin-top: 10px;
+}
+
+.site-title h1 {
+    font-size: 30px;
+    margin: 0; /* Reset margins */
+    color: white;
+}
+
+.navbar-2 {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    position: relative; /* Position relative for dropdowns */
+}
+
+.navbar-2 li {
+    position: relative; /* Position for dropdown */
+    margin-left: 20px; /* Space between menu items */
+}
+
+.navbar-2 a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    padding: 10px 15px; /* Add padding for clickable area */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-2 a:hover {
+    background-color: #555; /* Change background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Dropdown Menu Styling */
+.navbar-2 .dropdown {
+    display: none; /* Hide dropdowns by default */
+    position: absolute; /* Position dropdown relative to parent */
+    background-color: #444; /* Dark background for dropdown */
+    min-width: 160px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensure dropdown is above other elements */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.navbar-2 li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    margin: 0; /* Remove margin for dropdown items */
+}
+
+.dropdown a {
+    padding: 10px; /* Padding for dropdown items */
+    display: block; /* Make dropdown items block elements */
+    color: white; /* Text color for dropdown items */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.dropdown a:hover {
+    background-color: #555; /* Change background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Tagline Styling */
+.tagline {
+    text-align: center; /* Center tagline */
+    padding: 10px 0; /* Padding for tagline */
+    font-size: 16px; /* Adjust font size */
+    color: white; /* Lighter text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar-2 {
+        flex-direction: column; /* Stack navbar items */
+        width: 100%; /* Full width for navbar */
+    }
+
+    .navbar-2 li {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 5px; /* Space between stacked items */
+    }
+
+    .dropdown {
+        min-width: auto; /* Remove min-width for small screens */
+    }
+}
+
+
+
+
+
+
+/* ********************************************************************************************** */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    /* margin-top: 200px; */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensures footer sections are responsive */
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    
+    font-size: 1.5em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.social-media li {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px; /* Set icon size */
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222; /* Darker background for bottom section */
+    margin-top: 20px; /* Space above the bottom section */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    
+}
+
+
+
+/* ******************************************************************************************************* */
+
+
+ /* posts styling */
+ 
+ .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.single_post {
+    width: 30%; /* Adjusting to fit 3 posts in a row */
+    margin-bottom: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+}
+
+.single_post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+.single_post h1 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: black;
+    text-align: center;
+}
+
+.single_post p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.single_post .read-more {
+    background-color: white;
+    color: blue;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 0.5px solid black;
+}
+
+.single_post .read-more:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .single_post {
+        width: 45%; /* 2 posts in a row on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single_post {
+        width: 100%; /* 1 post in a row on mobile */
+    }
+
+    .single_post h1 {
+        font-size: 18px; /* Slightly smaller heading on mobile */
+    }
+
+    .single_post p {
+        font-size: 14px; /* Slightly smaller paragraph text on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .single_post {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .single_post .read-more {
+        padding: 8px 16px; /* Adjust button padding on smaller screens */
+        font-size: 14px; /* Smaller font size for the button */
+    }
+}
+
+/* 
+*************************************************************************************************** */
+
+/* categories styling */
+.container {
+    
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding for content */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Header Styles */
+h1, h2 {
+    color: #333; /* Text color */
+}
+
+h1 {
+    font-size: 2.5em; /* Main title size */
+    margin-bottom: 10px; /* Space below title */
+    text-align: center; /* Center the title */
+}
+
+h2 {
+    font-size: 2em; /* Subheading size */
+    margin-top: 20px; /* Space above subheading */
+    margin-bottom: 10px; /* Space below subheading */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+/* Subcategory List Styles */
+.subcategory-list li, .post-list li {
+    margin: 10px 0; /* Space between list items */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    padding: 10px; /* Padding for list items */
+    transition: background 0.3s; /* Transition effect for hover */
+}
+
+.subcategory-list li:hover, .post-list li:hover {
+    background: rgba(255, 255, 255, 1); /* Fully opaque background on hover */
+}
+
+/* Post Link Styles */
+.subcategory-list li a, .post-list li a {
+    text-decoration: none; /* Remove underline */
+    color: #4A90E2; /* Link color */
+    font-size: 1.2em; /* Increase font size for links */
+}
+
+.subcategory-list li a:hover, .post-list li a:hover {
+    color: #D35400; /* Change color on hover */
+}
+
+
+
+
+/* ************************************************************************************************************** */
+
+
+
+/* Front page styling */
+.featured-section {
+    background: url('https://img.freepik.com/free-photo/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai_1258-158267.jpg') no-repeat center center; /* Set your background image */
+    background-size: cover; /* Cover the entire div */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 100px 20px; /* Padding for top/bottom and left/right */
+    margin: 20px 0; /* Margin to separate from other content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Headings in Featured Section */
+.featured-section h2 {
+    font-size: 2.5em; /* Size of the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Paragraph in Featured Section */
+.featured-section p {
+    font-size: 1.2em; /* Size of the paragraph text */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #4A90E2; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Button text size */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.cta-button:hover {
+    background-color: #D35400; /* Change button color on hover */
+}
+
+/* ************************************************************************************************************* */
+
+
+/* single posts styling */
+
+
+/* Single Post Container */
+.single-post {
+    max-width: 800px; /* Maximum width for single post */
+    margin: 40px auto; /* Center the post with margin */
+    padding: 20px; /* Padding inside the container */
+    background-color: #ffffff; /* White background for the post */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Main Content Styles */
+.main {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Thumbnail Styles */
+.thumbnail {
+    margin-bottom: 20px; /* Space below the thumbnail */
+}
+
+/* Content Styles */
+.content {
+    color: #333; /* Text color */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5em; /* Size of the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #2c3e50; /* Darker color for the title */
+}
+
+/* Author, Date, and Other Info */
+.content p {
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Author and Date Styles */
+.content p:last-child {
+    font-size: 0.9em; /* Smaller size for date */
+    color: #7f8c8d; /* Lighter color for date */
+}
+
+/* Comments Section */
+.comments-area {
+    margin-top: 40px; /* Space above comments */
+    padding: 20px; /* Padding for comments */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for comments */
+}
+
+/* Divider */
+hr {
+    border: 1px solid #ddd; /* Light gray border */
+    margin: 40px 0; /* Space above and below divider */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .single-post {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller title on mobile */
+    }
+}
+/* *************************************************************************************************** */
+
+/* woocomerce styling */
+
+
+
+.cafe-menu-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007cba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-to-cart:hover {
+    background-color: #005a8a;
+}
+
+/* Container styling */
+.container3 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid layout for cafe menu items */
+.cafe-menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual cafe menu item styling */
+.cafe-menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.cafe-menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Thumbnail styling */
+.cafe-menu-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title styling */
+.cafe-menu-title {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #333;
+}
+
+/* Content styling */
+.cafe-menu-content {
+    font-size: 1em;
+    color: #666;
+    margin: 10px;
+}
+
+/* Price styling */
+.cafe-menu-price {
+    font-size: 1.2em;
+    color: #007cba;
+    margin: 10px;
+}
+
+/* Add to Cart button styling */
+.add-to-cart {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007cba;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    background-color: #005a8a;
+}
+
+
+.cafe-menu-thumbnail {
+    text-align: center; /* Center align thumbnail */
+}
+
+.cafe-menu-thumbnail img {
+    width: 100%; /* Ensure the image scales to the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Optional border for separation */
+}
+
+
+/* Container for the product grid */
+.categorized-products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid */
+}
+
+/* Styling for each product item */
+/* Container for product items, adjust as needed */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+/* Styling for individual product items */
+.product-item {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center align content */
+    border: 1px solid #ddd; /* Light border around items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: calc(33.333% - 20px); /* 3 items per row with space for gap */
+    background-color: #fff; /* Background color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for product items */
+.product-item:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Styling for product images */
+.product-item img {
+    width: 100%; /* Ensure image covers the full width */
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Ensure image covers the container without distortion */
+    display: block; /* Remove extra space below image */
+}
+
+/* Container for product content (title, price, button) */
+.product-item .content {
+    padding: 15px; /* Padding around content */
+    text-align: center; /* Center align text and button */
+    flex: 1; /* Allows content to fill available space */
+}
+
+/* Styling for product titles */
+.product-item h2 {
+    font-size: 1.2em; /* Slightly larger font size */
+    margin: 10px 0; /* Margin around title */
+    color: #333; /* Dark text color */
+}
+
+/* Styling for product prices */
+.product-item .price {
+    font-size: 1.1em; /* Font size for price */
+    color: #f00; /* Red color for price */
+    margin: 10px 0; /* Margin around price */
+}
+
+/* Add to Cart button styling */
+.product-item .button {
+    display: inline-block; /* Inline-block to align properly */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007cba; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.product-item .button:hover {
+    background-color: #005a87; /* Darker background color on hover */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}
+
+
+
+/* Style for the cart button container */
+.cafe-menu-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007cba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-to-cart:hover {
+    background-color: #005a8a;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid layout for cafe menu items */
+.cafe-menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual cafe menu item styling */
+.cafe-menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.cafe-menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Thumbnail styling */
+.cafe-menu-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title styling */
+.cafe-menu-title {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #333;
+}
+
+/* Content styling */
+.cafe-menu-content {
+    font-size: 1em;
+    color: #666;
+    margin: 10px;
+}
+
+/* Price styling */
+.cafe-menu-price {
+    font-size: 1.2em;
+    color: #007cba;
+    margin: 10px;
+}
+
+/* Add to Cart button styling */
+.add-to-cart {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007cba;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    background-color: #005a8a;
+}
+
+
+.cafe-menu-thumbnail {
+    text-align: center; /* Center align thumbnail */
+}
+
+.cafe-menu-thumbnail img {
+    width: 100%; /* Ensure the image scales to the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Optional border for separation */
+}
+
+
+/* Container for the product grid */
+.categorized-products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid */
+}
+
+/* Styling for each product item */
+.product-item {
+    border: 1px solid #ddd; /* Light border around items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: calc(33.333% - 20px); /* 3 items per row with space for gap */
+    background-color: #fff; /* Background color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.product-item:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Styling for product images */
+.product-item img {
+    width: 100%; /* Ensure image covers the full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+/* Styling for product titles */
+.product-item h2 {
+    font-size: 1.2em; /* Slightly larger font size */
+    margin: 10px; /* Margin around title */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center align text */
+}
+
+/* Styling for product prices */
+.product-item .price {
+    display: block; /* Block display to separate from title */
+    font-size: 1.1em; /* Font size for price */
+    color: #f00; /* Red color for price */
+    margin: 10px; /* Margin around price */
+    text-align: center; /* Center align text */
+}
+
+/* Styling for each product item */
+.product-item {
+    border: 1px solid #ddd; /* Light border around items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: calc(33.333% - 20px); /* 3 items per row with space for gap */
+    background-color: #fff; /* Background color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center align text and button */
+}
+
+/* Add to Cart button styling */
+.product-item .button {
+    display: inline-block; /* Inline-block to align properly */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007cba; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.product-item .button:hover {
+    background-color: #005a87; /* Darker background color on hover */
+}
+
+
+/* Style for the cart button container */
+.cart-button {
+    float: right; /* Align to the right, adjust as needed */
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+/* Container for the single product page */
+#product-<?php the_ID(); ?> {
+    margin: 20px 0;
+}
+
+/* Product image section */
+.woocommerce-product-gallery {
+    margin-bottom: 20px;
+}
+
+/* Product summary section */
+.product-summary {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Product title */
+.woocommerce-product-details__short-description {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Product price */
+.woocommerce-price {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Add to cart button */
+.single_add_to_cart_button {
+    background-color: #007cba;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.single_add_to_cart_button:hover {
+    background-color: #005a9c;
+}
+
+/* Product meta information */
+.product_meta {
+    margin-top: 20px;
+}
+
+/* Product tabs (Description, Additional Information, Reviews) */
+.woocommerce-tabs .panel {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Related products and upsells */
+.woocommerce ul.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.woocommerce ul.products li.product {
+    width: 24%;
+    margin: 0 1% 20px;
+    box-sizing: border-box;
+}
+
+.woocommerce ul.products li.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Container for the single product page */
+.single-product-container {
+    margin: 40px auto;
+}
+
+/* Product images section */
+.product-images {
+    padding: 20px;
+}
+
+/* Product summary section */
+.product-summary {
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.summary-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Enhance product title */
+.summary-inner .product_title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Enhance product price */
+.summary-inner .price {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Enhance add to cart button */
+.summary-inner .single_add_to_cart_button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.summary-inner .single_add_to_cart_button:hover {
+    background-color: #2980b9;
+}
+
+/* Product additional information section */
+.product-additional-info {
+    margin-top: 40px;
+}
+
+/* Tabs styling */
+.woocommerce-tabs .tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-tabs .tabs li {
+    margin-bottom: -1px;
+}
+
+.woocommerce-tabs .tabs a {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    background: #f9f9f9;
+    color: #333;
+    font-weight: bold;
+}
+
+.woocommerce-tabs .tabs a:hover,
+.woocommerce-tabs .tabs .active a {
+    background: #fff;
+    border-color: #ddd;
+    color: #e74c3c;
+}
+
+/* Related products section */
+.upsells.products,
+.related.products {
+    margin-top: 40px;
+}
+
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cart-content {
+    padding: 20px;
+}
+
+
+
+/* Style for the cart link */
+.cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Change to your preferred color */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 8px 12px;
+    background-color: #f5f5f5; /* Background color for the button */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the cart icon */
+.cart-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.cart-link:hover {
+    background-color: #ddd; /* Change to your preferred hover color */
+    color: #000; /* Change to your preferred hover text color */
+}
+
+
+
+/* ************************************************************************************************************** */
+
+/* Custom My Account Page Styles */
+.content-area {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px; /* Limit width for better readability */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333; /* Dark text for titles */
+    text-align: center; /* Center the title */
+}
+
+.custom-content {
+    background-color: #ffffff; /* White background for custom content */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.custom-content p {
+    color: #555; /* Subtle color for text */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Additional Text Styles */
+p {
+    color: #666; /* Subtle color for paragraphs */
+    line-height: 1.5; /* Better readability */
+}
+
+
+/* ************************************************************************************************************ */
+
+
+.registration-form, .messaging-system {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.registration-form h2, .messaging-system h2 {
+    margin-bottom: 20px;
+}
+
+.registration-form input, .messaging-system textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.registration-form input[type="submit"], .messaging-system input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.registration-form input[type="submit"]:hover, .messaging-system input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+
+
+/* ******************************************************************************************************* */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.flex-boxes {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-around; /* Space out the boxes evenly */
+    padding: 20px;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+}
+
+.box {
+    background-color: #f4f4f4; /* Light grey background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside each box */
+    flex: 1 1 30%; /* Grow and shrink with a base width of 30% */
+    text-align: center; /* Center text and image */
+    margin: 10px; /* Add some margin around each box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.box img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+h2 {
+    color: #333; /* Dark text color for titles */
+}
+
+p {
+    color: #555; /* Medium grey for content text */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 45%; /* Each box takes up 45% on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%; /* Each box takes full width on small screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller heading size for very small screens */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller paragraph size for very small screens */
+    }
+}
+
+
+
+/* **************************************************************************************************** */
+
+.about-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Space out the items */
+    padding: 20px; /* Add padding around the container */
+}
+
+.about-content {
+    width: 60%; /* About Us content takes up 60% of the width */
+    padding-right: 20px; /* Add some space between the content and image */
+    margin-left: 15px; /* Left margin for the content */
+}
+
+.about-image {
+    width: 35%; /* Image takes up 35% of the width */
+    margin-left: 15px; /* Left margin for the image */
+}
+
+.about-image img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+h2 {
+    color: #333; /* Dark text color for the heading */
+}
+
+p {
+    color: #555; /* Medium grey for content text */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .about-content {
+        width: 100%; /* Full width for content on smaller screens */
+        padding-right: 0; /* Remove right padding */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .about-image {
+        width: 100%; /* Full width for image on smaller screens */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add some space above the image */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Smaller heading size for very small screens */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller paragraph size for very small screens */
+    }
+}
+
+/* ******************************************************************************************************* */
+
+.talk-to-us {
+    background-image: url('data:image/jpeg;base64,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'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    padding: 40px; /* Add padding for spacing */
+    text-align: center; /* Center align text */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin: 20px; /* Margin around the div */
+    height: 500px;
+}
+
+.talk-to-us h2 {
+    margin-top: 200px;
+    font-size: 2em; /* Heading size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.talk-to-us p {
+    font-size: 1.2em; /* Paragraph size */
+    margin-bottom: 20px; 
+    color: #fff; /* Text color */
+}
+
+.read-more-button {
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.read-more-button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .talk-to-us {
+        padding: 20px; /* Reduced padding on smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .talk-to-us h2 {
+        margin-top: 100px; /* Reduced top margin */
+        font-size: 1.5em; /* Smaller heading size */
+    }
+
+    .talk-to-us p {
+        font-size: 1em; /* Smaller paragraph size */
+    }
+
+    .read-more-button {
+        padding: 8px 16px; /* Smaller button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .talk-to-us h2 {
+        margin-top: 50px; /* Further reduced top margin */
+        font-size: 1.3em; /* Smaller heading size for very small screens */
+    }
+
+    .talk-to-us p {
+        font-size: 0.9em; /* Even smaller paragraph size */
+    }
+
+    .read-more-button {
+        padding: 6px 12px; /* Smaller button padding for very small screens */
+    }
+}
+
+/* ************************************************************************************************** */
+
+/* contact us styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ2O-fgZT09m3eJDHv7G6TOkHCwoD7gTupIw&s'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    filter: brightness(0.5); /* Darken the image for better text readability */
+    z-index: -1; /* Set behind other content */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the background */
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
